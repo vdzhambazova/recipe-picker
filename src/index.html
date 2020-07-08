@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Recipe Picker</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-1">
+            <header class="header">
+                <form class="add__recipe--form">
+                    <input type="text" class="recipe__title--form" placeholder="Име">
+                    <input type="text" class="recipe__prep--form" placeholder="Време за приготвяне">
+                    <input type="text" class="recipe__servings--form" placeholder="Брой порции">
+                    <textarea type="text" class="recipe__ingredients--form" placeholder="Продукти" cols="40"
+                        rows="10">Продукти:</textarea>
+                    <textarea type="text" class="recipe__description--form" placeholder="Как да приготвим" cols="40"
+                        rows="15">Как да приготвим:</textarea>
+                    <button class="btn add__btn">
+                        <span>Добави</span>
+                    </button>
+                </form>
+            </header>
+        </div>
+        <div class="col-2">
+            <div class="results">
+                <ul class="results__list">
+                    <li>
+                        <a class="results__link results__link--active" href="#1">
+                            <div class="results__data">
+                                <h4 class="results__name">Мусака</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="results__link" href="#2">
+                            <div class="results__data">
+                                <h4 class="results__name">Таратор</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="results__link" href="#1">
+                            <div class="results__data">
+                                <h4 class="results__name">Патладжан папуцаки</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="results__link" href="#1">
+                            <div class="results__data">
+                                <h4 class="results__name">Домашна пица</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="results__link" href="#1">
+                            <div class="results__data">
+                                <h4 class="results__name">Баница</h4>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="results__pages">
+                    <button class="btn-inline results__btn--prev">
+                        <span>Page 1</span>
+                    </button>
+                    <button class="btn-inline results__btn--next">
+                        <span>Page 3</span>
+                    </button>
+                </div>
+            </div>
+            <div class="recipe">
+                <h1 class="recipe__title">
+                    <span>Мусака</span>
+                </h1>
+                <div class="recipe__details">
+                    <div class="recipe__info">
+                        <span class="recipe__info-data recipe__info-data--minutes">45 минути</span>
+                    </div>
+                    <div class="recipe__info">
+                        <span class="recipe__info-data recipe__info-data--people">4 порции</span>
+                    </div>
+                </div>
+
+                <div class="recipe__ingredients">
+                    <ul class="recipe__ingredient-list">
+                        <li class="recipe__item">
+                            <div class="recipe__ingredient">1 кг картофи</div>
+                        </li>
+                        <li class="recipe__item">
+                            <div class="recipe__ingredient">500 г кайма</div>
+                        </li>
+                        <li class="recipe__item">
+                            <div class="recipe__ingredient">1 лук</div>
+                        </li>
+                        <li class="recipe__item">
+                            <div class="recipe__ingredient">1 яйце</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="recipe__directions">
+                    <h2 class="heading-2">Как да приготвим:</h2>
+                    <p class="recipe__directions-text">
+                        Загрявате мазнината в дълбок тиган или тенджера.
+                        В загрятата мазнина задушете измитият,
+                        изчистен и нарязан на дребно лук, докато омекне.
+                        Добавяте нарязаните на дребно половината домати и каймата,
+                        черният пипер и чубрицата, както и една чаена лъжица сол.
+                        Може да ползвате кайма, каквато имате под ръка,
+                        но най-вкусната мусаката става с кайма смес – 50% свинско и
+                        50 % телешко месо.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <button class="btn recipe__love recipe__love--active">
+                <span>Вечеря</span>
+            </button>
+            <button class=" btn recipe__love">
+                <span>Закуска</span>
+            </button>
+            <button class=" btn recipe__love">
+                <span>Brunch</span>
+            </button>
+            <button class="btn recipe__love">
+                <span>Лято</span>
+            </button>
+            <button class="btn recipe__love recipe__love">
+                <span>Junk</span>
+            </button>
+            <button class="btn recipe__love recipe__love--active">
+                <span>Месо</span>
+            </button>
+            <button class="btn recipe__love">
+                <span>Здравословно</span>
+            </button>
+            <button class="btn recipe__love">
+                <span>Veggie</span>
+            </button>
+            <button class="btn recipe__love">
+                <span>Десерти</span>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
