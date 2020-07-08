@@ -5,7 +5,7 @@ export const getPrepTimeInput = () => elements.prepTimeInput.value.trim();
 export const getServingsInput = () => elements.servingsInput.value.trim();
 export const getIngredientsInput = () => elements.ingredientsInput.value.split(",")
     .map(Function.prototype.call, String.prototype.trim);
-export const getDescriptionInput = () => elements.descriptionInput.value.trim();
+export const getDirectionsInput = () => elements.directionsInput.value.trim();
 export const getTagsInput = () => {
     const tags = []
     elements.dinnerTagInput.checked && tags.push(elements.dinnerTagInput.value);
@@ -26,7 +26,7 @@ export const clearInput = () => {
     elements.prepTimeInput.value = "";
     elements.servingsInput.value = "";
     elements.ingredientsInput.value = "";
-    elements.descriptionInput.value = "";
+    elements.directionsInput.value = "";
     elements.dinnerTagInput.checked = false;
     elements.breakfastTagInput.checked = false;
     elements.brunchTagInput.checked = false;

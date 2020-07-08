@@ -5,8 +5,8 @@ export default class Recipes {
         this.recipes = [];
     }
 
-    addRecipe(title, prepTime, servingsCount, ingredinets, description, tags) {
-        const recipe = { id: uniqid(), title, prepTime, servingsCount, ingredinets, description, tags }
+    addRecipe(title, prepTime, servingsCount, ingredients, directions, tags) {
+        const recipe = { id: uniqid(), title, prepTime, servingsCount, ingredients, directions, tags }
         this.recipes.push(recipe);
 
         this.persistData();

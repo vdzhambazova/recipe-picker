@@ -50,7 +50,7 @@ body {
     transform: translateY(-2px);
 }
 
-.recipe__description--form, .recipe__ingredients--form, .recipe__servings--form, .recipe__prep--form, .recipe__title--form, .add__btn {
+.recipe__directions--form, .recipe__ingredients--form, .recipe__servings--form, .recipe__prep--form, .recipe__title--form, .add__btn {
     border: none;
     font-family: inherit;
     color: inherit;

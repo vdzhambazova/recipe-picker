@@ -4,7 +4,7 @@ export const elements = {
     prepTimeInput: document.querySelector(".recipe__prep--form"),
     servingsInput: document.querySelector(".recipe__servings--form"),
     ingredientsInput: document.querySelector(".recipe__ingredients--form"),
-    descriptionInput: document.querySelector(".recipe__description--form"),
+    directionsInput: document.querySelector(".recipe__directions--form"),
     dinnerTagInput: document.getElementById("dinner"),
     breakfastTagInput: document.getElementById("breakfast"),
     brunchTagInput: document.getElementById("brunch"),
