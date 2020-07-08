@@ -1,13 +1,18 @@
 import { elements } from "./base";
 
 export const getTitleInput = () => elements.titleInput.value.trim();
+
 export const getPrepTimeInput = () => elements.prepTimeInput.value.trim();
+
 export const getServingsInput = () => elements.servingsInput.value.trim();
+
 export const getIngredientsInput = () => elements.ingredientsInput.value.split(",")
     .map(Function.prototype.call, String.prototype.trim);
+
 export const getDirectionsInput = () => elements.directionsInput.value.trim();
+
 export const getTagsInput = () => {
-    const tags = []
+    const tags = [];
     elements.dinnerTagInput.checked && tags.push(elements.dinnerTagInput.value);
     elements.breakfastTagInput.checked && tags.push(elements.breakfastTagInput.value);
     elements.brunchTagInput.checked && tags.push(elements.brunchTagInput.value);

@@ -20,13 +20,13 @@ export const renderRecipe = (recipe) => {
 
     <div class="recipe__ingredients">
         <ul class="recipe__ingredient-list">
-            ${recipe.ingredinets.map(i => createIngredient(i)).join("")}
+            ${recipe.ingredients.map(i => createIngredient(i)).join("")}
         </ul>
     </div>
     <div class="recipe__directions">
         <h2 class="heading-2">Как да приготвим:</h2>
             <p class="recipe__directions-text">
-                ${recipe.description}
+                ${recipe.directions}
             </p>
     </div>
     `

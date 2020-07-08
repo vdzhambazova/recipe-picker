@@ -17,4 +17,5 @@ export const elements = {
     resultList: document.querySelector(".results__list"),
     searchResPages: document.querySelector(".results__pages"),
     recipe: document.querySelector(".recipe"),
+    tagsPickFrom: document.querySelector(".form__tags--pick"),
 }

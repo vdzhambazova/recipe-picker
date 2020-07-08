@@ -3,6 +3,7 @@ import Recipes from "./models/Recipes";
 import * as recipeFormView from "./views/recipeFormView";
 import * as recipeListView from "./views/recipeListView";
 import * as recipeContentView from "./views/recipeContentView";
+import * as tagsView from "./views/tagsView";
 
 /** Global state of the app
  * - All Recipes List
@@ -86,7 +87,9 @@ const recipeFormController = () => {
     }
 
     // 3. Save to storage and render
-    recipeListView.renderRecipes(state.allRecipes.recipes);
+    state.selectedTags.length > 0
+        ? recipeListView.renderRecipes(state.allRecipes.recipes)
+        : recipeListView.renderRecipes(state.allRecipes.recipes)
     console.log(state.allRecipes.recipes);
 }
 
@@ -125,3 +128,12 @@ const recipeContentController = () => {
 
 ["hashchange", "load"].forEach(event => window.addEventListener(event, recipeContentController));
 
+elements.tagsPickFrom.addEventListener("click", e => {
+    const btn = e.target.closest(".btn");
+    if (btn) {
+        tagsView.toggleSelectTag(btn, state.selectedTags.includes(btn.value));
+        state.selectedTags.includes(btn.value)
+            ? state.selectedTags.unshift(btn.value)
+            : state.selectedTags.push(btn.value)
+    }
+});
