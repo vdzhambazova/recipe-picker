@@ -25,7 +25,7 @@ export const initListeners = () => {
     elements.tagsPickFrom.addEventListener("click", event => controllers.tagsController(state, event));
 
     // Handle pagination
-    elements.searchResPages.addEventListener("click", e => {
+    elements.resultPages.addEventListener("click", e => {
         const btn = e.target.closest(".btn-inline");
         if (btn) {
             const goToPage = parseInt(btn.dataset.goto, 10);

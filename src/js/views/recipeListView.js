@@ -2,7 +2,7 @@ import { elements } from "./base";
 
 export const clearResults = () => {
     elements.resultList.innerHTML = "";
-    elements.searchResPages.innerHTML = "";
+    elements.resultPages.innerHTML = "";
 };
 
 export const renderRecipes = (recipes, page = 1, resPerPage = 5) => {
@@ -40,7 +40,7 @@ const renderButtons = (page, numResults, resPerPage) => {
         button = createButton(page, "prev");
     }
 
-    button && elements.searchResPages.insertAdjacentHTML("afterbegin", button);
+    button && elements.resultPages.insertAdjacentHTML("afterbegin", button);
 }
 
 //type: prev or next

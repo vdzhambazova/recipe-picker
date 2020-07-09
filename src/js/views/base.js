@@ -15,7 +15,7 @@ export const elements = {
     dessertTagInput: document.getElementById("dessert"),
     veggieTagInput: document.getElementById("veggie"),
     resultList: document.querySelector(".results__list"),
-    searchResPages: document.querySelector(".results__pages"),
+    resultPages: document.querySelector(".results__pages"),
     recipe: document.querySelector(".recipe"),
     tagsPickFrom: document.querySelector(".form__tags--pick"),
     tagsButtons: document.querySelector(".tags__pick")
