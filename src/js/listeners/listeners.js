@@ -7,14 +7,12 @@ const state = new State();
 export const initListeners = () => {
     // Handle load
     window.addEventListener('load', () => {
-        if (state.allRecipes.recipes.length > 0) {
-            state.currentRecipe = state.allRecipes.recipes[0];
-            // 6. Call recipe list controller
-            controllers.recipeListController(state);
-            // 7. Call recipe content controller 
-            controllers.recipeContentController(state);
-        }
-    });
+        // 1. Call recipe list controller
+        controllers.recipeListController(state);
+        // 2. Call recipe content controller 
+        controllers.recipeContentController(state);
+    }
+    );
 
     // Handle hash change
     window.addEventListener("hashchange", () => controllers.recipeContentController(state));
