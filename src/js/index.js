@@ -14,7 +14,7 @@ import * as tagsView from "./views/tagsView";
  */
 
 const state = {};
-
+window.state = state
 // Set initial state
 window.addEventListener('load', () => {
     //all recipes
@@ -132,8 +132,11 @@ elements.tagsPickFrom.addEventListener("click", e => {
     const btn = e.target.closest(".btn");
     if (btn) {
         tagsView.toggleSelectTag(btn, state.selectedTags.includes(btn.value));
-        state.selectedTags.includes(btn.value)
-            ? state.selectedTags.unshift(btn.value)
-            : state.selectedTags.push(btn.value)
+        if (state.selectedTags.includes(btn.value)) {
+            const index = state.selectedTags.indexOf(btn.value);
+            state.selectedTags.splice(index, 1);
+        } else {
+            state.selectedTags.push(btn.value)
+        }
     }
 });
