@@ -8,10 +8,10 @@ export const recipeContentController = (state) => {
 const renderRecipeContent = (recipe, state) => {
     // 1. Prepare UI 
     views.clearRecipe();
-    if (state.allRecipes) views.highlightSelected(recipe.id);
+    if (state.allRecipes.length > 0) views.highlightSelected(recipe.id);
 
     // 2. Render recipe
-    views.renderRecipe(recipe);
+    recipe && views.renderRecipe(recipe);
 }
 
 const getCurrentRecipeFromHash = (state) => {

@@ -41,4 +41,5 @@ export const clearInput = () => {
     elements.meatTagInput.checked = false;
     elements.junkTagInput.checked = false;
     elements.dessertTagInput.checked = false;
+    elements.tagsButtons.classList.remove("tags__pick--active");
 }

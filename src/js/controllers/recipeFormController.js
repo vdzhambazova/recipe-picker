@@ -26,6 +26,8 @@ export const recipeFormController = (state) => {
             ingredients,
             directions,
             tags);
+        state.selectedRecipes = [];
+        state.selectedTags = [];
 
     } else {
         alert("Fill all form fields!");
