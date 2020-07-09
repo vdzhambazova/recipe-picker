@@ -166,7 +166,7 @@ body {
     transform: translate(-50%, 20%) skewY(-6deg);
     color: #fff;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     width: 70%;
     line-height: 1.95;
@@ -199,7 +199,7 @@ body {
 
 .recipe__ingredients {
     padding: 1rem 5rem;
-    font-size: 1.5rem;
+    font-size: 1.49rem;
     line-height: 1.4;
     background-color: #F2EFEE;
     display: block;
@@ -244,7 +244,7 @@ body {
 }
 
 .recipe__directions-text {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-align: center;
     width: 90%;
     margin-bottom: 3rem;
@@ -286,5 +286,5 @@ body {
     color: inherit;
     font-size: 1.5rem;
     padding-left: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
