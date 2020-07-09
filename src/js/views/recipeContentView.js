@@ -28,8 +28,7 @@ export const renderRecipe = (recipe) => {
             <p class="recipe__directions-text">
                 ${recipe.directions}
             </p>
-    </div>
-    `
+    </div>`
 
     elements.recipe.insertAdjacentHTML("afterbegin", markup);
 }
@@ -37,5 +36,4 @@ export const renderRecipe = (recipe) => {
 const createIngredient = ingredient => `
     <li class="recipe__item">
         <div class="recipe__ingredient">${ingredient}</div>
-    </li>
-`;
+    </li>`;

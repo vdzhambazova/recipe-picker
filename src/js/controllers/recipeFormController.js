@@ -10,7 +10,7 @@ export const recipeFormController = (state) => {
     const directions = views.getDirectionsInput();
     const tags = views.getTagsInput();
 
-    // 2. Add to state
+    // 2. Set State
     if (title
         && prepTime
         && servingsCount
@@ -25,7 +25,7 @@ export const recipeFormController = (state) => {
             servingsCount,
             ingredients,
             directions,
-            tags)
+            tags);
 
     } else {
         alert("Fill all form fields!");

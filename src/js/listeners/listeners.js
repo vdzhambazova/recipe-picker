@@ -3,16 +3,14 @@ import { State } from "../state";
 import { elements } from "../views"
 
 const state = new State();
+window.state = state;
 
 export const initListeners = () => {
     // Handle load
     window.addEventListener('load', () => {
-        // 1. Call recipe list controller
         controllers.recipeListController(state);
-        // 2. Call recipe content controller 
         controllers.recipeContentController(state);
-    }
-    );
+    });
 
     // Handle hash change
     window.addEventListener("hashchange", () => controllers.recipeContentController(state));

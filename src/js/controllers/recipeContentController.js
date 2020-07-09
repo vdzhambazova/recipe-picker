@@ -6,7 +6,7 @@ export const recipeContentController = (state) => {
 }
 
 const renderRecipeContent = (recipe, state) => {
-    // 1. Prepare UI for changes
+    // 1. Prepare UI 
     views.clearRecipe();
     if (state.allRecipes) views.highlightSelected(recipe.id);
 
@@ -17,6 +17,7 @@ const renderRecipeContent = (recipe, state) => {
 const getCurrentRecipeFromHash = (state) => {
     // 1. Get Id from URL
     const id = window.location.hash.replace("#", "");
+    
     // 2. Set current recipe
     if (id) state.currentRecipe = state.allRecipes.recipes.find(r => r.id === id);
     return state.currentRecipe;

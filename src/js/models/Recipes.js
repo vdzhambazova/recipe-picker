@@ -6,7 +6,7 @@ export class Recipes {
     }
 
     addRecipe(title, prepTime, servingsCount, ingredients, directions, tags) {
-        const recipe = { id: uniqid(), title, prepTime, servingsCount, ingredients, directions, tags }
+        const recipe = { id: uniqid(), title, prepTime, servingsCount, ingredients, directions, tags };
         this.recipes.push(recipe);
 
         this.persistData();
