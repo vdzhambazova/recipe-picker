@@ -1,18 +1,18 @@
 import { elements } from "./base";
 
 export const clearResults = () => {
-    elements.resultList.innerHTML = ""
-    elements.searchResPages.innerHTML = ""
+    elements.resultList.innerHTML = "";
+    elements.searchResPages.innerHTML = "";
 };
 
 export const renderRecipes = (recipes, page = 1, resPerPage = 5) => {
-    // render recipes
+    // 1. Render recipes
     const start = (page - 1) * resPerPage;
     const end = page * resPerPage;
 
     recipes.slice(start, end).forEach(renderRecipe);
 
-    // render pagination buttons 
+    // 2. Render pagination buttons 
     renderButtons(page, recipes.length, resPerPage);
 }
 
@@ -22,8 +22,7 @@ const renderRecipe = (recipe => {
             <div class="results__data">
                 <h4 class="results__name">${recipe.title}</h4>
             </div>
-        </a>
-    `
+        </a>`
 
     elements.resultList.insertAdjacentHTML("beforeend", markup);
 })
