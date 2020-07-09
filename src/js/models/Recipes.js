@@ -1,6 +1,6 @@
 import uniqid from "uniqid";
 
-export default class Recipes {
+export class Recipes {
     constructor() {
         this.recipes = [];
     }
