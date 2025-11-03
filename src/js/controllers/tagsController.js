@@ -16,7 +16,7 @@ export const tagsController = (state, event) => {
         }
 
         state.selectedRecipes = state.allRecipes.recipes
-            .filter(recipe => state.selectedTags
+            .filter(recipe => !recipe.isDraft && state.selectedTags
                 .every(tag => recipe.tags.includes(tag)));
 
         if (state.selectedRecipes.length > 0) state.currentRecipe = state.selectedRecipes[0];
