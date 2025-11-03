@@ -26,8 +26,9 @@ export class State {
         this.selectedRecipes = [];
         this.selectedTags = [];
 
-        if (this.allRecipes.recipes.length > 0) {
-            this.currentRecipe = this.allRecipes.recipes[0];
+        const publishedRecipes = this.allRecipes.getPublishedRecipes();
+        if (publishedRecipes.length > 0) {
+            this.currentRecipe = publishedRecipes[0];
         }
     }
 }

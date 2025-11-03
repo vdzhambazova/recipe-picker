@@ -26,6 +26,8 @@ export const getTagsInput = () => {
     return tags;
 }
 
+export const getIsDraftInput = () => elements.isDraftInput.checked;
+
 export const clearInput = () => {
     elements.titleInput.value = "";
     elements.prepTimeInput.value = "";
@@ -41,5 +43,6 @@ export const clearInput = () => {
     elements.meatTagInput.checked = false;
     elements.junkTagInput.checked = false;
     elements.dessertTagInput.checked = false;
+    elements.isDraftInput.checked = false;
     elements.tagsButtons.classList.remove("tags__pick--active");
 }

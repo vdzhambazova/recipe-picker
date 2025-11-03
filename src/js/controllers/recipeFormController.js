@@ -9,6 +9,7 @@ export const recipeFormController = (state) => {
     const ingredients = views.getIngredientsInput();
     const directions = views.getDirectionsInput();
     const tags = views.getTagsInput();
+    const isDraft = views.getIsDraftInput();
 
     // 2. Set State
     if (title
@@ -25,7 +26,8 @@ export const recipeFormController = (state) => {
             servingsCount,
             ingredients,
             directions,
-            tags);
+            tags,
+            isDraft);
         state.selectedRecipes = [];
         state.selectedTags = [];
 

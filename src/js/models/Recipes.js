@@ -5,8 +5,8 @@ export class Recipes {
         this.recipes = [];
     }
 
-    addRecipe(title, prepTime, servingsCount, ingredients, directions, tags) {
-        const recipe = { id: uniqid(), title, prepTime, servingsCount, ingredients, directions, tags };
+    addRecipe(title, prepTime, servingsCount, ingredients, directions, tags, isDraft = false) {
+        const recipe = { id: uniqid(), title, prepTime, servingsCount, ingredients, directions, tags, isDraft };
         this.recipes.push(recipe);
 
         this.persistData();
@@ -19,6 +19,18 @@ export class Recipes {
         this.recipes.splice(index, 1);
 
         this.persistData();
+    }
+
+    toggleDraftStatus(id) {
+        const recipe = this.recipes.find(el => el.id === id);
+        if (recipe) {
+            recipe.isDraft = !recipe.isDraft;
+            this.persistData();
+        }
+    }
+
+    getPublishedRecipes() {
+        return this.recipes.filter(recipe => !recipe.isDraft);
     }
 
     persistData() {

@@ -14,6 +14,7 @@ export const elements = {
     junkTagInput: document.getElementById("junk"),
     dessertTagInput: document.getElementById("dessert"),
     veggieTagInput: document.getElementById("veggie"),
+    isDraftInput: document.getElementById("isDraft"),
     resultList: document.querySelector(".results__list"),
     resultPages: document.querySelector(".results__pages"),
     recipe: document.querySelector(".recipe"),
