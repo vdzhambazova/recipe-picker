@@ -21,14 +21,6 @@ export class Recipes {
         this.persistData();
     }
 
-    toggleDraftStatus(id) {
-        const recipe = this.recipes.find(el => el.id === id);
-        if (recipe) {
-            recipe.isDraft = !recipe.isDraft;
-            this.persistData();
-        }
-    }
-
     getPublishedRecipes() {
         return this.recipes.filter(recipe => !recipe.isDraft);
     }
